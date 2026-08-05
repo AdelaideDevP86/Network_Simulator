@@ -1,9 +1,15 @@
 from domain.component import Component
-from domain.system_model import SystemModel
-from tests.test_component import laptop
+from domain.system_model import NetworkProject
+#
+#
+# laptop = Component("laptop", "laptop van Adelaide", "prive en studie")
+# systeem = SystemModel("systeem van Adelaide")
+# systeem.toevoegen_component(laptop)
+#
+# for comp in systeem.componenten:
+#     print(comp.naam)
 
-systeem = SystemModel("systeem van Adelaide")
-systeem.toevoegen_component(laptop)
+componenten = ["A", "B", "C"]
 
-for comp in systeem.componenten:
-    print(comp.naam)
+for iets in enumerate(componenten):
+    print(iets)
