@@ -15,6 +15,10 @@ def valideer_ipv4(adres):
 
         if getal < 0 or getal > 255:
             raise ValueError("Ongeldig IP-adres, voer een getal tussen 0 en 255 per octet.")
+    else:
+        return True
+
+
 
 
 # -------------------------
@@ -28,6 +32,8 @@ def valideer_prefix(prefix):
 
     if getal < 0 or getal > 32:
         raise ValueError("Prefix ongeldig, voer een getal tussen 0 en 32.")
+    else:
+        return True
 
 
 # -------------------------
@@ -41,3 +47,5 @@ def valideer_vlan(vlan):
 
     if getal < 1 or getal > 4094:
         raise ValueError("Vlan ongeldig, voer een getal tussen 1 en 4094.")
+    else :
+        return True

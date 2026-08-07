@@ -9,7 +9,17 @@ laptop = Component("laptop", "laptop van Adelaide",
 
 systeem = NetworkProject("systeem van Adelaide")
 systeem.toevoegen_component(laptop)
-systeem.component_wijzigen("laptop van Adelaide", )
 
 
+# systeem.component_wijzigen( "laptop van Adelaide", nieuwe_component_naam =  "Laptop van spiderman",
+#                             ip_adres= "192.88.99.00", )
+# print("test 1")
+# print(laptop.naam, "\n")
+# print(laptop.ip_adres, "\n")
+# print(laptop.gateway, "\n")
+
+systeem.component_wijzigen(
+    "Bestaat niet",
+    ip_adres="192.168.2.10"
+)
 

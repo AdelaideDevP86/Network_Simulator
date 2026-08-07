@@ -1,6 +1,7 @@
 from domain.component import Component
 from domain.vlan import Vlan
 from domain.verbinding import Verbinding
+import validators.validators as validators
 
 
 class NetworkProject:
@@ -23,18 +24,31 @@ class NetworkProject:
         return None
 
 
-    def component_wijzigen(self, component_naam, naam=None, ip_adres=None,
+    def component_wijzigen(self, huidige_component_naam, nieuwe_component_naam=None, ip_adres=None,
                            prefix=None, gateway=None, vlan=None):
-       for component in self.componenten:
-           if component.naam == component_naam:
-             if self.naam is not None:
-                 self.naam = naam
-                 print(self.naam)
-             if ip_adres is not None:
-                 self.ip_adres = ip_adres
 
-    else:
-        raise ValueError("Apparaat niet gevonden")
+        component = self.component_zoeken(huidige_component_naam)
+
+        if component is None:
+            raise ValueError("Component bestaat niet in het project.")
+        if nieuwe_component_naam is not None:
+            component.naam = nieuwe_component_naam
+        if ip_adres is not None:
+            if validators.valideer_ipv4(ip_adres):
+              component.ip_adres = ip_adres
+        if prefix is not None:
+            if validators.valideer_prefix(prefix):
+                component.prefix = prefix
+        if gateway is not None:
+            if validators.valideer_ipv4(gateway):
+                component.gateway = gateway
+        if vlan is not None:
+            if validators.valideer_vlan(vlan):
+                component.vlan = vlan
+
+
+
+          # ValueError("Apparaat niet gevonden")
 
     def toevoegen_verbinding(self, verbinding):
 
