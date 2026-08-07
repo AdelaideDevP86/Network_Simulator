@@ -1,12 +1,19 @@
+from domain.component import Component
+from domain.vlan import Vlan
+from domain.verbinding import Verbinding
 
 class NetworkProject:
     def __init__(self, naam):
         self.naam = naam
         self.componenten = []
         self.verbindingen= []
+        self.vlans = []
 
     def toevoegen_component(self, component):
+        if not isinstance(component, Component):
+            raise TypeError("Alleen Component-objecten kunnen worden toegevoegd.")
         self.componenten.append(component)
+
 
     def component_zoeken(self, component_naam):
         for comp in self.componenten:
@@ -16,6 +23,9 @@ class NetworkProject:
         return None
 
     def toevoegen_verbinding(self, verbinding):
+
+        if not isinstance(verbinding, Verbinding):
+            raise TypeError("Alleen Verbinding-objecten kunnen worden toegevoegd.")
 
         if verbinding.component_a not in self.componenten:
             raise ValueError("Component A bestaat niet in het project.")
@@ -36,6 +46,18 @@ class NetworkProject:
 
         self.verbindingen.append(verbinding)
 
+
+
+    def toevoegen_vlan(self, vlan):
+        if not isinstance(vlan, Vlan):
+            raise TypeError("Alleen Vlan-objecten kunnen worden toegevoegd.")
+
+        for bestaande_vlan in self.vlans:
+            if bestaande_vlan.subnet == vlan.subnet:
+                raise ValueError("Vlan bestaat al.")
+
+
+        self.vlans.append(vlan)
 
 
 
