@@ -1,7 +1,7 @@
 from domain.component import Component
 from domain.system_model import NetworkProject
 from domain.verbinding import Verbinding
-from domain.AnalysisService import AnalysisService
+from domain.analysisservice import AnalysisService
 
 
 pc1= Component("pc", "test1",'', "192.245.245.254" )

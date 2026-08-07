@@ -53,7 +53,7 @@ class NetworkProject:
             raise TypeError("Alleen Vlan-objecten kunnen worden toegevoegd.")
 
         for bestaande_vlan in self.vlans:
-            if bestaande_vlan.subnet == vlan.subnet:
+            if bestaande_vlan.nummer == vlan.nummer:
                 raise ValueError("Vlan bestaat al.")
 
 

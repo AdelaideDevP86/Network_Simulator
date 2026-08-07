@@ -1,7 +1,7 @@
 from domain.component import Component
 from domain.system_model import NetworkProject
 from domain.verbinding import Verbinding
-from domain.AnalysisService import AnalysisService
+from domain.analysisservice import AnalysisService
 
 pc1= Component("pc", "test1", )
 pc2= Component("pc", "test2", "waarom hebben we een beschrijving")
