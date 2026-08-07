@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e206d024-074b-4338-93b6-f8458b866b5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gui/main_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ROADMAP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_component_wijzigen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/analysisservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/analysis_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/component.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/system_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/network_project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vlan.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vlan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_analyser_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_analyser_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/network_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/network_project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_system_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_system_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_verbinding.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_verbinding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_vlan.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_vlan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validators/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/validators/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +44,11 @@
     "Python.AnalysisService.executor": "Run",
     "Python.component.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.network_project.executor": "Run",
     "Python.system_model.executor": "Run",
     "Python.test_analyser_service.executor": "Run",
     "Python.test_component.executor": "Run",
+    "Python.test_component_wijzigen.executor": "Run",
     "Python.test_system_model.executor": "Run",
     "Python.test_verbinding.executor": "Run",
     "Python.test_vlan.executor": "Run",
@@ -307,7 +302,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784328147724</updated>
       <workItem from="1784328148813" duration="49616000" />
-      <workItem from="1786057325280" duration="28863000" />
+      <workItem from="1786057325280" duration="37802000" />
     </task>
     <servers />
   </component>
@@ -315,16 +310,18 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Network_Simulator$test_component.coverage" NAME="test_component Coverage Results" MODIFIED="1786105212876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Network_Simulator$test_analyser_service.coverage" NAME="test_analyser_service Coverage Results" MODIFIED="1786107707206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Network_Simulator$test_component_wijzigen.coverage" NAME="test_component_wijzigen Coverage Results" MODIFIED="1786120696648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/system_failure_analyzer$test_component.coverage" NAME="test_component Coverage Results" MODIFIED="1786103391906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/system_failure_analyzer$system_model.coverage" NAME="system_model Coverage Results" MODIFIED="1785874179929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/domain" />
+    <SUITE FILE_PATH="coverage/system_failure_analyzer$test_vlan.coverage" NAME="test_vlan Coverage Results" MODIFIED="1786091508532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/system_failure_analyzer$test_system_model.coverage" NAME="test_system_model Coverage Results" MODIFIED="1785895718108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/system_failure_analyzer$AnalysisService.coverage" NAME="AnalysisService Coverage Results" MODIFIED="1785897667751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/domain" />
+    <SUITE FILE_PATH="coverage/Network_Simulator$network_project.coverage" NAME="network_project Coverage Results" MODIFIED="1786120693410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/domain" />
     <SUITE FILE_PATH="coverage/system_failure_analyzer$test_analyser_service.coverage" NAME="test_analyser_service Coverage Results" MODIFIED="1785897674162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/system_failure_analyzer$main.coverage" NAME="main Coverage Results" MODIFIED="1785859641100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/system_failure_analyzer$component.coverage" NAME="component Coverage Results" MODIFIED="1786097049497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/domain" />
-    <SUITE FILE_PATH="coverage/Network_Simulator$test_component.coverage" NAME="test_component Coverage Results" MODIFIED="1786105212876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/Network_Simulator$test_analyser_service.coverage" NAME="test_analyser_service Coverage Results" MODIFIED="1786107707206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/system_failure_analyzer$test_component.coverage" NAME="test_component Coverage Results" MODIFIED="1786103391906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/system_failure_analyzer$test_verbinding.coverage" NAME="test_verbinding Coverage Results" MODIFIED="1785892571618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/system_failure_analyzer$system_model.coverage" NAME="system_model Coverage Results" MODIFIED="1785874179929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/domain" />
-    <SUITE FILE_PATH="coverage/system_failure_analyzer$test_vlan.coverage" NAME="test_vlan Coverage Results" MODIFIED="1786091508532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>

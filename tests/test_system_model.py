@@ -1,11 +1,10 @@
 from domain.component import Component
 from domain.network_project import NetworkProject
 #
-#
-# laptop = Component("laptop", "laptop van Adelaide", "prive en studie")
-# systeem = SystemModel("systeem van Adelaide")
+# #
+# systeem = NetworkProject("systeem van Adelaide")
 # systeem.toevoegen_component(laptop)
-#
+# #
 # for comp in systeem.componenten:
 #     print(comp.naam)
 

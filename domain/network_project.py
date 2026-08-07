@@ -22,6 +22,20 @@ class NetworkProject:
 
         return None
 
+
+    def component_wijzigen(self, component_naam, naam=None, ip_adres=None,
+                           prefix=None, gateway=None, vlan=None):
+       for component in self.componenten:
+           if component.naam == component_naam:
+             if self.naam is not None:
+                 self.naam = naam
+                 print(self.naam)
+             if ip_adres is not None:
+                 self.ip_adres = ip_adres
+
+    else:
+        raise ValueError("Apparaat niet gevonden")
+
     def toevoegen_verbinding(self, verbinding):
 
         if not isinstance(verbinding, Verbinding):
