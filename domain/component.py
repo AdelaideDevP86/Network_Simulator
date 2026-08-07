@@ -6,10 +6,10 @@ class Component:
                  component_type,
                  naam,
                  beschrijving="",
-                 ip_adres= None,
-                 prefix = None,
-                 gateway = None,
-                 vlan = None):
+                 ip_adres=None,
+                 prefix=None,
+                 gateway=None,
+                 vlan=None):
 
         self.component_type = component_type
         self.naam = naam
@@ -30,8 +30,6 @@ class Component:
 
         if vlan is not None:
             validators.valideer_vlan(self.vlan)
-
-
 
     def __str__(self):
         return (f"Device-type: {self.component_type}\n"

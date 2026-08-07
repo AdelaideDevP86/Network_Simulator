@@ -1,5 +1,5 @@
 from domain.component import Component
-from domain.system_model import NetworkProject
+from domain.network_project import NetworkProject
 from domain.vlan import Vlan
 
 pc1= Component("pc", "test1",'', "192.245.245.254" )

@@ -15,7 +15,5 @@ class Vlan:
         if not naam.strip():
             raise ValueError("Naam mag niet leeg zijn.")
 
-
-
     def __str__(self):
         return f"VLAN {self.nummer} - {self.naam} "
