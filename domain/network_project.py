@@ -46,9 +46,22 @@ class NetworkProject:
             if validators.valideer_vlan(vlan):
                 component.vlan = vlan
 
+    def component_verwijderen(self, component_naam):
+        found = False
+        for component in self.componenten:
+            if component.naam == component_naam:
+                found = True
+                break
+
+        if not found:
+            raise ValueError("Component bestaat niet in het project.")
+        else:
+            self.componenten.remove(component)
 
 
-          # ValueError("Apparaat niet gevonden")
+
+
+
 
     def toevoegen_verbinding(self, verbinding):
 
