@@ -1,14 +1,30 @@
 from domain.component import Component
 from domain.network_project import NetworkProject
+from domain.verbinding import Verbinding
 
 
-laptop = Component("laptop", "laptop van Adelaide",
-                   "prive en studie", "192.168.2.0",
-                   "20", "192.168.2.70", 2000)
+laptop = Component("laptop", "Laptop")
+switch = Component("switch", "Switch")
+router = Component("router", "Router")
 
-systeem = NetworkProject("systeem van Adelaide")
+verbinding_1 = Verbinding(laptop, switch, "UP")
+verbinding_2 = Verbinding(laptop, router, "UP")
+
+systeem = NetworkProject("Testnetwerk")
+
 systeem.toevoegen_component(laptop)
+systeem.toevoegen_component(switch)
+systeem.toevoegen_component(router)
 
-# systeem.component_verwijderen("laptop")
-#
-print(laptop)
+systeem.toevoegen_verbinding(verbinding_1)
+systeem.toevoegen_verbinding(verbinding_2)
+
+print("VOOR:")
+for verbinding in systeem.verbindingen:
+    print(verbinding)
+
+systeem.component_verwijderen("Laptop")
+
+print("\nNA:")
+for verbinding in systeem.verbindingen:
+    print(verbinding)

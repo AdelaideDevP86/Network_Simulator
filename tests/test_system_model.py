@@ -8,7 +8,3 @@ from domain.network_project import NetworkProject
 # for comp in systeem.componenten:
 #     print(comp.naam)
 
-componenten = ["A", "B", "C"]
-
-for iets in enumerate(componenten):
-    print(iets)

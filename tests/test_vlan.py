@@ -8,15 +8,17 @@ pc3= Component("pc", "test3", "waarom hebben we een beschrijving","192.245.245.2
 
 systeem = NetworkProject("systeem van Adelaide")
 
-vlan1 = Vlan(1, "kantoor",  "test")
-vlan2 = Vlan(2, "kantoor",  "test2")
-vlan3 = Vlan(3, "kantoor",  "test3")
-vlan4 = Vlan(3, "kantoor",  "test3")
+vlan1 = Vlan(1, "kantoor1",  "test")
+vlan2 = Vlan(2, "kantoor2",  "test2")
+vlan3 = Vlan(3, "kantoor3",  "test3")
+vlan4 = Vlan(4, "kantoor4",  "test3")
 
 systeem.toevoegen_vlan(vlan1)
 systeem.toevoegen_vlan(vlan2)
 systeem.toevoegen_vlan(vlan3)
 systeem.toevoegen_vlan(vlan4)
 
+systeem.verwijderen_vlan(vlan1)
+systeem.verwijderen_vlan(vlan2)
 for vlan in systeem.vlans:
     print(vlan)
