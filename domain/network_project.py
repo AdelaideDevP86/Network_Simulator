@@ -28,34 +28,59 @@ class NetworkProject:
 
         return None
 
-    def component_wijzigen(self, huidige_component_naam, nieuwe_component_naam=None,
-                           ip_adres=None, prefix=None, gateway=None, vlan=None):
-
+    def component_wijzigen(
+            self,
+            huidige_component_naam,
+            nieuwe_component_naam=None,
+            ip_adres=None,
+            prefix=None,
+            gateway=None,
+            vlan=None,
+    ):
         component = self.component_zoeken(huidige_component_naam)
 
         if component is None:
             raise ValueError("Component bestaat niet in het project.")
 
+        # Alle invoer valideren
         if nieuwe_component_naam is not None:
-            if self.component_zoeken(nieuwe_component_naam) is not None:
-                raise ValueError("Component bestaat al, kies andere naam.")
-
-            component.naam = nieuwe_component_naam
+            validators.valideer_naam(nieuwe_component_naam)
+        if (
+                nieuwe_component_naam is not None
+                and nieuwe_component_naam != huidige_component_naam
+                and self.component_zoeken(nieuwe_component_naam) is not None
+        ):
+            raise ValueError("Component bestaat al, kies een andere naam.")
 
         if ip_adres is not None:
             validators.valideer_ipv4(ip_adres)
-            component.ip_adres = ip_adres
 
         if prefix is not None:
             validators.valideer_prefix(prefix)
-            component.prefix = prefix
 
         if gateway is not None:
             validators.valideer_ipv4(gateway)
-            component.gateway = gateway
 
         if vlan is not None:
             validators.valideer_vlan(vlan)
+
+            if not any(bestaande_vlan.nummer == vlan for bestaande_vlan in self.vlans):
+                raise ValueError("VLAN bestaat niet in het project.")
+
+        # Pas waarden pas toe nadat alles geldig is
+        if nieuwe_component_naam is not None:
+           component.naam = nieuwe_component_naam
+
+        if ip_adres is not None:
+            component.ip_adres = ip_adres
+
+        if prefix is not None:
+            component.prefix = prefix
+
+        if gateway is not None:
+            component.gateway = gateway
+
+        if vlan is not None:
             component.vlan = vlan
 
     def component_verwijderen(self, component_naam):
@@ -142,3 +167,10 @@ class NetworkProject:
         for component in self.componenten:
             if component.vlan == vlan.nummer:
                 print(f"{component.naam} - {component.beschrijving} in {vlan}")
+
+    def project_statistieken(self):
+        return {
+            "componenten": len(self.componenten),
+            "verbindingen": len(self.verbindingen),
+            "vlans": len(self.vlans)
+        }

@@ -18,7 +18,7 @@ systeem.toevoegen_component(laptop)
 systeem.toevoegen_component(laptop2)
 
 
-systeem.component_wijzigen( "laptop van Adelaide", nieuwe_component_naam =  "Laptop van spiderman",
+systeem.component_wijzigen( "laptop van Adelaide", nieuwe_component_naam =  "Laptop van spiderman1",
                             ip_adres= "192.88.99.00", )
 # print("test 1")
 # print(laptop.naam, "\n")

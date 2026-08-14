@@ -49,3 +49,13 @@ def valideer_vlan(vlan):
         raise ValueError("Vlan ongeldig, voer een getal tussen 1 en 4094.")
     else :
         return True
+
+def valideer_naam(naam):
+    if not isinstance(naam, str):
+        raise TypeError("Naam moet een string zijn.")
+
+    if not naam.strip():
+        raise ValueError("Naam mag niet leeg zijn.")
+
+    if len(naam) > 100:
+        raise ValueError("Naam mag maximaal 100 tekens bevatten.")
