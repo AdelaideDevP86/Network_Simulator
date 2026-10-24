@@ -1,20 +1,13 @@
 def analyseer(project):
     meldingen = []
+    meldingen.extend(check_verbindingen(project))
+    meldingen.extend(check_ipadres(project))
+    meldingen.extend(check_dubbele_ipadressen(project))
 
-    for component in project.componenten:
-        gevonden = False
+    return meldingen
 
-        for verbinding in project.verbindingen:
-            if verbinding.component_a == component or verbinding.component_b == component:
-                gevonden = True
-                break
-
-        if not gevonden:
-            meldingen.append(f"{component.naam} heeft geen verbinding.")
-
-        if not component.ip_adres:
-            meldingen.append(f"{component.naam} heeft nog geen IP-adres.")
-
+def check_dubbele_ipadressen(project):
+    meldingen = []
     for i, component in enumerate(project.componenten):
 
         if not component.ip_adres:
@@ -29,5 +22,31 @@ def analyseer(project):
                 meldingen.append(
                     f"{component.naam} en {ander_component.naam} gebruiken hetzelfde IP-adres."
                 )
+
+    return meldingen
+
+def check_verbindingen(project):
+    meldingen = []
+
+    for component in project.componenten:
+        gevonden = False
+
+        for verbinding in project.verbindingen:
+            if verbinding.component_a == component or verbinding.component_b == component:
+                gevonden = True
+                break
+
+        if not gevonden:
+            meldingen.append(f"{component.naam} heeft geen verbinding.")
+
+    return meldingen
+
+def check_ipadres(project):
+    meldingen = []
+
+    for component in project.componenten:
+
+        if not component.ip_adres:
+            meldingen.append(f"{component.naam} heeft nog geen IP-adres.")
 
     return meldingen
