@@ -27,5 +27,7 @@ print(systeem.status_verbinding())
 
 print(verbinding1)
 
+
+
 # for verbinding in systeem.verbindingen:
 #     print(verbinding)

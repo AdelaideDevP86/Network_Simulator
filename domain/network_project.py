@@ -146,6 +146,21 @@ class NetworkProject:
                 verbindingen_overig.append(verbinding)
         return verbindingen_aan, verbindingen_overig
 
+    def zoek_actieve_buren_component(self, component):
+        buren = []
+        if not isinstance(component, Component):
+            raise TypeError("Voer een Component-object in.")
+        if component not in self.componenten:
+            raise ValueError("Component bestaat niet in het project.")
+        
+        actieve_verbindingen, inactieve_verbindingen = self.scheid_actieve_en_inactieve_verbindingen()
+        for verbinding in actieve_verbindingen:
+            if verbinding.component_a == component:
+                buren.append(verbinding.component_b)
+            elif verbinding.component_b == component:
+                buren.append(verbinding.component_a)
+        return buren
+
     def toevoegen_vlan(self, vlan):
         if not isinstance(vlan, Vlan):
             raise TypeError("Alleen Vlan-objecten kunnen worden toegevoegd.")
