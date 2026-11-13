@@ -136,7 +136,7 @@ class NetworkProject:
         else:
             raise ValueError("Verbinding bestaat niet in het project.")
 
-    def status_verbinding(self):
+    def scheid_actieve_en_inactieve_verbindingen(self):
         verbindingen_aan = []
         verbindingen_overig = []
         for verbinding in self.verbindingen: 

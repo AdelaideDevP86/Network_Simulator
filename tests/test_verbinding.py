@@ -17,7 +17,7 @@ verbinding1 = Verbinding(pc1, pc2, "UP")
 verbinding2 = Verbinding(pc2, pc3, "DOWN")
 verbinding3 = Verbinding(pc1, pc3, "UP")
 
-# verbinding1.wijzig_status("DOWN")
+#verbinding1.wijzig_status("DOWN")
 systeem.toevoegen_verbinding(verbinding1)
 systeem.toevoegen_verbinding(verbinding2)
 systeem.toevoegen_verbinding(verbinding3)
