@@ -136,6 +136,16 @@ class NetworkProject:
         else:
             raise ValueError("Verbinding bestaat niet in het project.")
 
+    def status_verbinding(self):
+        verbindingen_aan = []
+        verbindingen_overig = []
+        for verbinding in self.verbindingen: 
+            if verbinding.status == "UP":
+                verbindingen_aan.append(verbinding)
+            else:
+                verbindingen_overig.append(verbinding)
+        return verbindingen_aan, verbindingen_overig
+
     def toevoegen_vlan(self, vlan):
         if not isinstance(vlan, Vlan):
             raise TypeError("Alleen Vlan-objecten kunnen worden toegevoegd.")

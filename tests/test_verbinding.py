@@ -13,11 +13,19 @@ systeem.toevoegen_component(pc2)
 
 systeem.toevoegen_component(pc3)
 
-verbinding = Verbinding(pc1, pc2, "UP")
-verbinding.wijzig_status("")
-systeem.toevoegen_verbinding(verbinding)
+verbinding1 = Verbinding(pc1, pc2, "UP")
+verbinding2 = Verbinding(pc2, pc3, "DOWN")
+verbinding3 = Verbinding(pc1, pc3, "UP")
 
-print(verbinding)
+# verbinding1.wijzig_status("DOWN")
+systeem.toevoegen_verbinding(verbinding1)
+systeem.toevoegen_verbinding(verbinding2)
+systeem.toevoegen_verbinding(verbinding3)
+
+
+print(systeem.status_verbinding())
+
+print(verbinding1)
 
 # for verbinding in systeem.verbindingen:
 #     print(verbinding)
