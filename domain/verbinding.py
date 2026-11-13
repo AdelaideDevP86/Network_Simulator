@@ -1,13 +1,19 @@
 
 class Verbinding:
-    def __init__(self, component_a, component_b, status="UNKNOWN"):
+    def __init__(self, component_a, component_b, status="UP"):
 
-        if status not in ("UNKNOWN", "UP", "DOWN"):
+        if status not in ("UP", "DOWN"):
             raise ValueError("Not a valid status")
 
         self.component_a = component_a
         self.component_b = component_b
         self.status = status
+
+    def wijzig_status(self,  nieuwe_status):
+        if nieuwe_status not in ("UP", "DOWN"):
+            raise ValueError("Not a valid status")
+        else:
+            self.status = nieuwe_status
 
 
 

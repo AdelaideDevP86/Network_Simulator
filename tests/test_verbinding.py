@@ -14,6 +14,7 @@ systeem.toevoegen_component(pc2)
 systeem.toevoegen_component(pc3)
 
 verbinding = Verbinding(pc1, pc2, "UP")
+verbinding.wijzig_status("")
 systeem.toevoegen_verbinding(verbinding)
 
 print(verbinding)
